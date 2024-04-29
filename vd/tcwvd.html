@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+       "Hello everyone,",
+       "The Road to Legend competition battle is approaching, and I'm here to leave a record.",
+       "Once again, I want to express our beliefs to everyone.",
+       "After winning, what we want to do is to create a music community centered around Phantom Live.", 
+       "It might be difficult to convey in just a few words, but in essence,",
+       "it's about providing a home for lost cats.",
+       "TCW adheres to the belief that music connects us all, ",
+       "and we conduct various activities based on this belief.",
+       "So far, whether it's me or my teammates, we have all become acquainted through music. ",
+       "Yohei, Shiki, Ryu",
+       "—members who have been by my side like family, brought together by the fate woven by melodies.",
+       "These encounters have enriched my life, ",
+       "and I want everyone to know how wonderful the bonds created by music can be,",
+       "just like at Bar 4/7. ",
+       "Gathering, conversing, expanding our circle—",
+       "I want to turn Club Paradox into such a place. ",
+       "This is our ideal, ",
+       "and the blazing flames in our hearts are not only the motivation for this competition",
+       "but also the driving force propelling us forward. ",
+       "The vivid scenes of Buraikan witnessed with Yohei ten years ago,",
+       "like the scorching sun, if TCW could shine as brightly as Buraikan did in the past,",
+       "just imagining it fills me with the same youthful fervor.",
+       " My current feelings are like the eve of the competition, leading us to grasp victory.",
+       "After creating a home for lost cats, we must gather and celebrate together. ",
+       "See you all in the future."
+    ]
+
+        //继续故事
+        let storyIndex = 0
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                location.href = "vd.html"
+            }
+        }
+
+        //背景
+       function preload() {
+            bg = loadImage("img/tcwvd.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>

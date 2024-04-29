@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bae Victory Declaration</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+       "Hey, all you hip-hop fans, what's up?",
+       "I'm Suzaka from BAE.",
+       "Just thinking about the upcoming battle gets me trembling with excitement.",
+       "After all, winning means we could get the rights to host Paradox Live.",
+       "I want to capture this feeling of unrest in my heart right now.",
+       "If BAE wins the hosting rights, there are so many things I want to do.",
+       "Just like what BURAIKAN did ten years ago—built a hip-hop city and hosted unprecedented celebration events.",
+       "Most importantly, if we can become legends second only to BURAIKAN, we'll leave our mark in history.",
+       "BAE's goal has always been to prove ourselves through music, so we must fulfill this dream no matter what.",
+       "Besides our goals, I want to expand the influence of hip-hop.",
+       "And spread the message 'Being yourself is cool; embrace your life.'",
+       "With that, I believe the world will surely become better.",
+       "So, to make it happen this time, we must win.",
+       "The chance that slipped away last time, I don't want to miss it again.","For this, I hope to harness the power of all you hip-hop fans. Together, let's win.",
+       "Let us raise the flag of victory.","Please support us."
+    ]
+
+        //继续故事
+        let storyIndex = 0
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                location.href = "vd.html"
+            }
+        }
+
+        //背景
+       function preload() {
+            bg = loadImage("img/baevd.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+
+    <button onclick="home()" id="home">Back</button>
+
+    <!--要读cozmezVD吗=？-->
+    <div class="popupCZ" id="popupCZ">
+        <div class="overlayCZ"></div>
+        <div class="contentCZ">
+            <div class="closeCZ"></div>
+            <h1>Read this section?</h1>
+            <button onclick="yesCZ()" id="yesCZ"> Yes </button>
+            <button onclick="togglePopupCZ()" id="noCZ"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopupCZ()" id="popCZ"> cozmez </button>
+
+    <!--未达标准，还未解锁-->
+    <div class="popupUc" id="popupUc">
+        <div class="overlayUc"></div>
+        <div class="contentUc">
+            <div class="closeUc"></div>
+            <h1>You have not unlock this yet. Buy it with $30?</h1>
+            <button onclick="togglePopupUc()" id="noUc"> Quit </button>
+            <button onclick="Buycz()" id="bUc">Buy</button>
+        </div>
+    </div>
+    <p id="VDT">Victory Declaration</p> 
+
+    <!--钱不够cozmez-->
+    <div class="popupM" id="popupM">
+        <div class="overlayM"></div>
+        <div class="contentM">
+            <div class="closeM"></div>
+            <h1>Not enough money</h1>
+            <button onclick="togglePopupM()" id="noM"> Quit </button>
+        </div>
+    </div>
+
+
+      <!--要读tcwVD吗=？-->
+      <div class="popuptcw" id="popuptcw">
+        <div class="overlaytcw"></div>
+        <div class="contenttcw">
+            <div class="closetcw"></div>
+            <h1>Read this section?</h1>
+            <button onclick="yestcw()" id="yestcw"> Yes </button>
+            <button onclick="togglePopuptcw()" id="notcw"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopuptcw()" id="poptcw"> TCW </button>
+
+    <!--未达标准，还未解锁-->
+    <div class="popupUt" id="popupUt">
+        <div class="overlayUt"></div>
+        <div class="contentUt">
+            <div class="closeUt"></div>
+            <h1>You have not unlock this yet. Buy it with $30?</h1>
+            <button onclick="togglePopupUt()" id="noUt"> Quit </button>
+            <button onclick="Buytcw()" id="bUt">Buy</button>
+        </div>
+    </div>
+    <p id="VDT">Victory Declaration</p> 
+
+    <!--钱不够tcw-->
+    <div class="popupMtcw" id="popupMtcw">
+        <div class="overlayMtcw"></div>
+        <div class="contentMtcw">
+            <div class="closeMtcw"></div>
+            <h1>Not enough money</h1>
+            <button onclick="togglePopupMtcw()" id="noMtcw"> Quit </button>
+        </div>
+    </div>
+
+
+    <!--要读baeVd吗=？-->
+    <div class="popupbae" id="popupbae">
+        <div class="overlaybae"></div>
+        <div class="contentbae">
+            <div class="closebae"></div>
+            <h1>Read this section?</h1>
+            <button onclick="yesbae()" id="yesbae"> Yes </button>
+            <button onclick="togglePopupbae()" id="nobae"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopupbae()" id="popbae"> BAE </button>
+
+    <!--未达标准，还未解锁-->
+    <div class="popupUb" id="popupUb">
+        <div class="overlayUb"></div>
+        <div class="contentUb">
+            <div class="closeUb"></div>
+            <h1>You have not unlock this yet. Buy it with $30?</h1>
+            <button onclick="togglePopupUb()" id="noUb"> Quit </button>
+            <button onclick="Buybae()" id="bUb">Buy</button>
+        </div>
+    </div>
+    <!--钱不够bae-->
+    <div class="popupMb" id="popupMb">
+        <div class="overlayMb"></div>
+        <div class="contentMb">
+            <div class="closeMb"></div>
+            <h1>Not enough money</h1>
+            <button onclick="togglePopupMb()" id="noMb"> Quit </button>
+        </div>
+    </div>
+
+
+    <!--要读akyVd吗=？-->
+    <div class="popupak" id="popupak">
+        <div class="overlayak"></div>
+        <div class="contentak">
+            <div class="closeak"></div>
+            <h1>Read this section?</h1>
+            <button onclick="yesak()" id="yesak"> Yes </button>
+            <button onclick="togglePopupak()" id="noak"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopupak()" id="popak"> Akanyatsura </button>
+
+    <!--未达标准，还未解锁-->
+    <div class="popupUa" id="popupUa">
+        <div class="overlayUa"></div>
+        <div class="contentUa">
+            <div class="closeUa"></div>
+            <h1>You have not unlock this yet. Buy it with $30?</h1>
+            <button onclick="togglePopupUa()" id="noUa"> Quit </button>
+            <button onclick="Buya()" id="bUa">Buy</button>
+        </div>
+    </div>
+    <!--钱不够akyr-->
+    <div class="popupMa" id="popupMa">
+        <div class="overlayMa"></div>
+        <div class="contentMa">
+            <div class="closeMa"></div>
+            <h1>Not enough money</h1>
+            <button onclick="togglePopupMa()" id="noMa"> Quit </button>
+        </div>
+    </div>
+
+
+
+    <p id="VDT">Victory Declaration</p> 
+    
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let cz = parseInt(localStorage.getItem('cozmez')) 
+       let ryu = parseInt(localStorage.getItem('ryu'))
+       let bae = parseInt(localStorage.getItem('bae')) 
+       let tcw = parseInt(localStorage.getItem('tcw'))
+       let x = parseInt(localStorage.getItem('money'))
+
+    
+    //未达标准与cozmez胜利
+    function togglePopupM() {
+        document.getElementById("popupM").classList.toggle('active')
+       }
+    function togglePopupUc() {
+        document.getElementById("popupUc").classList.toggle('active')
+       }
+       if (cz===1){
+            function togglePopupCZ() {
+                document.getElementById("popupCZ").classList.toggle('active')
+            }
+        }
+        else {
+            function togglePopupCZ() {
+                document.getElementById("popupUc").classList.toggle('active')
+            }
+        }
+       function yesCZ(){
+        location.href = "cozmezvd.html"   
+       }
+       function Buycz() {
+        if (x < 30) {
+            togglePopupM()
+        }
+        else{
+            var x1
+            cz++
+            x1 = parseInt(x)
+            x = (x1 - 30).toString()
+            console.log(x)
+            console.log(x1)
+            localStorage.setItem('money', x.toString())
+            localStorage.setItem('cozmez', cz.toString())
+            location.href = "cozmezvd.html"  
+        } 
+    }
+     
+        //未达标准与tcw胜利
+        function togglePopupMtcw() {
+        document.getElementById("popupMtcw").classList.toggle('active')
+       }
+        function togglePopupUt() {
+            document.getElementById("popupUt").classList.toggle('active')        
+        }
+        if (tcw===1){
+            function togglePopuptcw() {
+                document.getElementById("popuptcw").classList.toggle('active')
+            }
+        }
+        else {
+            function togglePopuptcw() {
+                document.getElementById("popupUt").classList.toggle('active')
+            }
+        }
+        function yestcw(){
+            location.href = "tcwvd.html"   
+       }
+        function Buytcw() {
+        if (x < 30) {
+            togglePopupMtcw()
+        }
+        else{
+            var x1
+            tcw++
+            x1 = parseInt(x)
+            x = (x1 - 30).toString()
+            console.log(x)
+            console.log(x1)
+            localStorage.setItem('money', x.toString())
+            localStorage.setItem('tcw', tcw.toString())
+            location.href = "tcwvd.html"   
+        } 
+    }
+
+
+         //未达标准与bae胜利
+         function togglePopupMb() {
+        document.getElementById("popupMb").classList.toggle('active')
+       } 
+         function togglePopupUb() {
+        document.getElementById("popupUb").classList.toggle('active')
+       }
+        if (bae===1){
+            function togglePopupbae() {
+                document.getElementById("popupbae").classList.toggle('active')
+            }
+        }
+        else {
+            function togglePopupbae() {
+                document.getElementById("popupUb").classList.toggle('active')
+            }
+        }
+       function yesbae(){
+        location.href = "baevd.html"   
+       }
+       function Buybae() {
+        if (x < 30) {
+            togglePopupMb()
+        }
+        else{
+            var x1
+            bae++
+            x1 = parseInt(x)
+            x = (x1 - 30).toString()
+            console.log(x)
+            console.log(x1)
+            localStorage.setItem('money', x.toString())
+            localStorage.setItem('bae', bae.toString())
+            location.href = "baevd.html"   
+        } 
+            } 
+            //未达标准与恶组胜利
+            function togglePopupMa() {
+            document.getElementById("popupMa").classList.toggle('active')
+       } 
+         function togglePopupUa() {
+        document.getElementById("popupUa").classList.toggle('active')
+       }
+
+       if (ryu===1){
+            function togglePopupak() {
+                document.getElementById("popupak").classList.toggle('active')
+            }
+        }
+        else {
+            function togglePopupak() {
+                document.getElementById("popupUa").classList.toggle('active')
+            }
+        }
+
+       function yesak(){
+        location.href = "akyrvd.html"   
+       }
+
+       function Buya() {
+        if (x < 30) {
+            togglePopupMa()
+        }
+        else{
+            var x1
+            ryu++
+            x1 = parseInt(x)
+            x = (x1 - 30).toString()
+            console.log(x)
+            console.log(x1)
+            localStorage.setItem('money', x.toString())
+            localStorage.setItem('ryu', ryu.toString())
+            location.href = "akyrvd.html"   
+            } 
+        }
+
+
+       //返回收藏的按钮
+       function home(){
+        location.href = "../others.html"   
+       }
+
+      
+       //恶组胜利宣言
+       function akyrVD() {
+        location.href = "akyrvd.html"
+       }
+
+
+       function preload() {
+            bg = loadImage("img/vd.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

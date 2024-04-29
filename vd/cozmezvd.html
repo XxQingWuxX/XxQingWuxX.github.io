@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+       "Victory will be ours.",
+       "I won't settle for just one win, we will win countless times.",
+       "I want everyone to know that Cozmez is the strongest.",
+       "They say winning can lead to Paradox Live.",
+       "If that becomes ours, I want to hold more performances.",
+       "Nayuta and I made it here with hip-hop.",
+       "In this messed up world, music is all we can do.",
+       "Though it's not clear, there must be others like us somewhere.",
+       "I want to show them what we can do.",
+       "Then, with the money we earn from performances,",
+       "We'll give equal opportunities to those living at the bottom.",
+       "We'll overturn everything from birth to growing up with hip-hop,",
+       "To create a better world.",
+       "Whatever I want to do, I'll do it.",
+       "I'll make it all happen."
+    ]
+
+
+        //继续故事
+        let storyIndex = 0
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                location.href = "vd.html"
+            }
+        }
+
+        //背景
+       function preload() {
+            bg = loadImage("img/cozmezvd.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>

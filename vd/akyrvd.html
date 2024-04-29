@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanyatsura Victory Declaration</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+       "Hello everyone,",
+       "I heard that winning this time could lead to great opportunities like Paradox Life,",
+       "so I'll make an announcement here.",
+       "If Akanyatsura win in Road to Legend, we will make Club Paradox our home.",
+       "As you all know, the members of our group are not actually related by blood;",
+       "we are just closely connected by our organization and music. ",
+       "There are many people in this world who have no place to call home,",
+       "who don't know what to do, and who cry alone.",
+       "We want to create a home for them,", 
+       "where they can immerse themselves in our music and find their own comrades.",
+       "Having such a place to live freely is amazing, right?",
+       "It would make hip-hop and the world much more interesting.",
+       "If everyone could live a good life, ",
+       "it would be a win-win situation for everyone.",
+       "Moreover, if we don't decisively win and strengthen the Suseki Group this time,",
+       "I won't be able to explain it to my father.",
+       "Once I make a decision, I will stick to it until the end.", 
+       "In any case, the sixth person, hurry up and come.",
+       "You won't be disappointed."
+    ]
+
+        //继续故事
+        let storyIndex = 0
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                location.href = "vd.html"
+            }
+        }
+
+        //背景
+       function preload() {
+            bg = loadImage("img/akyrvd.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>
