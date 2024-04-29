@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>0-2</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+
+    <ul class="dropdownmenu">
+        <li class="one">cozmez
+            <ul>
+                <li>
+                    The Yatonokami twins are orphans who live in a part of the slum, growing up abused by adults.
+                </li>
+                <li>
+                    As they grew up, their mutual support fostered a deep sense of trust between them.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="dropdownmenu2">
+        <li class="two">Style
+            <ul>
+                <li>
+                    Their songs incorporate the realities and burdens of life into their lyrics, expressing discontentment with the world.
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="dropdownmenu3">
+        <li class="three">Kanata Yatonokami 
+            <ul>
+                <li>
+                    Kanata, who is the older one of the Yatonokami twins, is careless and finds everything troublesome,
+                    but for the sake of Nayuta, he is willing to do anything and give up everything.
+                </li>
+                <li>
+                    "I don't care about anyone other than Nayuta."
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="dropdownmenu4">
+        <li class="four">Nayuta Yatonokami
+            <ul>
+                <li>
+                    Nayuta, the younger of the twins, his fragility alongside his publicity personality and misanthropic indifference, yet his genuine care for Kanata stands in stark contrast.
+                </li>
+                <li>
+                    "Without Kanata, my life has no meaning."
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="dropdownmenu5">
+        <li class="five">Income
+            <ul>
+                <li>Cozmez performs on stage to earn money, with Kanata also accepting commissions from Iori.
+                </li>
+                <li>
+                    In the past, Nayuta participated in experiments for money, but it resulted in a deterioration of his health.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="popupN" id="popupN">
+        <div class="overlayN"></div>
+        <div class="contentN">
+            <div class="closeN"></div>
+                <h1>Continue?</h1>
+                <button onclick="yesN()" id="yesN"> Ch03 </button>
+                <button onclick="togglePopupN()" id="noN"> X </button>
+                <button onclick="backN()" id="backN"> Ch0 </button>
+
+        </div>
+    </div>
+    <button onclick="togglePopupN()" id="popN"> Next </button>
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch = localStorage.getItem('ch')
+       let x = localStorage.getItem('money')
+
+        function pass() {
+            var x1
+            if (ch < 2) {
+                ch++
+                x1 = parseInt(x)
+                x = (x1 + 5).toString()
+                console.log(x)
+                console.log(x1)
+                localStorage.setItem('money', x.toString())
+                localStorage.setItem('ch', ch.toString())
+            } 
+            else {
+                location.href = "ch0.html"
+            }
+            }
+
+            function pass1() {
+            var x1
+            if (ch < 2) {
+                ch++
+                x1 = parseInt(x)
+                x = (x1 + 5).toString()
+                console.log(x)
+                console.log(x1)
+                localStorage.setItem('money', x.toString())
+                localStorage.setItem('ch', ch.toString())
+            } 
+            else {
+                location.href = "ch03.html"
+            }
+            }
+
+
+       function togglePopupN() {
+            document.getElementById("popupN").classList.toggle('active')
+       }
+       function yesN(){
+        location.href = "ch03.html" 
+        pass1()
+          
+       }   
+
+       function backN(){
+        location.href = "ch0.html" 
+        pass()  
+       }
+
+       function preload() {
+            bg = loadImage("../HomePage.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

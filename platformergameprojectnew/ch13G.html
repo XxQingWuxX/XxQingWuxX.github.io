@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter1 Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+        }
+        canvas {
+            display: block; 
+            width: 100vw; 
+            height: 100vh; 
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+    let ch = localStorage.getItem('ch')
+    let x = localStorage.getItem('money')
+    let cameraX = 0
+    let cameraY = 0
+    let playerImg = new Image()
+    playerImg.src = '../mc.png'
+
+    //玩家
+    let player = {
+        x: 10, 
+        y: 800,
+        x_v: 0,
+        y_v: 0,
+        jump: true,
+        height: 100,
+        width: 80
+    }
+
+    // 动作
+    let keys = {
+        right: false,
+        left: false,
+        up: false,
+    }
+
+    //重力  
+    let gravity = 0.3
+    let friction = 0.7
+    
+    //图层
+    let platforms = []
+
+    //假门
+    let fake ={
+        x: 1400,
+        y: 20,
+        width: 100,
+        height: 100
+        }
+    
+    //门
+    let door = {
+        x: -10,
+        y: -50,
+        width: 100,
+        height: 100 
+    }
+
+    //背景
+    function Ccanvas(){
+        ctx.fillStyle = "white"
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
+    
+    //地
+    function Cplat(){
+        ctx.fillStyle = "#46C3C3"
+        for(let i = 0; i < platforms.length; i++) {
+            ctx.fillRect(platforms[i].x - cameraX, platforms[i].y - cameraY, platforms[i].width, platforms[i].height)
+        }
+    }
+
+    //门
+    function Cdoor(){
+        ctx.fillStyle = "#3472E6"
+        ctx.fillRect(door.x - cameraX, door.y - cameraY, door.width, door.height)
+        
+    }
+    
+    //玩家
+    function Cplayer(){
+        ctx.drawImage(playerImg, player.x - cameraX, player.y - cameraY, player.width, player.height);
+    }
+
+    //假门
+    function Cfake(){
+        ctx.fillStyle = "#3472E6"
+        ctx.fillRect(fake.x - cameraX, fake.y - cameraY, fake.width, fake.height)
+    }
+
+    //地的具体位置
+    function createplat(){
+        platforms.push(
+        {
+            x: -300,
+            y: 400,
+            width: 300,
+            height: 60
+        },
+        {
+            x: -500,
+            y: 200,
+            width: 300,
+            height: 60
+        },
+        {
+            x: -100,
+            y: 50,
+            width: 300,
+            height: 60
+        },
+        {
+            x: 250,  
+            y: 500,
+            width: 300,
+            height: 60
+        },
+        {
+            x: -300,
+            y: -250,
+            width: 300,
+            height: 60
+        },
+        {
+            x: 600,
+            y: 350,
+            width: 300,
+            height: 60
+        },
+        {
+            x: -1000,
+            y: canvas.height - cameraY, 
+            width: canvas.width + 2000,
+            height: 500
+        },
+
+        {
+            x: 300,
+            y: 0,
+            width: 300,
+            height: 60
+        },
+        {
+            x: 950,
+            y: 220,
+            width: 300,
+            height: 60
+        },
+        {
+            x: 700,
+            y: 0,
+            width: 150,
+            height: 60
+        },
+        {
+            x: 1300,
+            y: 120,
+            width: 300,
+            height: 100,
+        },
+        
+    )
+    }
+    
+    //移动
+    function keydown(e) {
+        if(e.keyCode == 37) {
+            keys.left = true
+        }
+        if(e.keyCode == 38) {
+            if(player.jump == false) {
+                player.y_v = -10
+            }
+        }
+        if(e.keyCode == 39) {
+            keys.right = true
+        }
+    }
+    
+    function keyup(e) {
+        if(e.keyCode == 37) {
+            keys.left = false
+        }
+        if(e.keyCode == 38) {
+            if(player.y_v < -2) {
+                player.y_v = -3
+            }
+        }
+        if(e.keyCode == 39) {
+            keys.right = false
+        }
+    } 
+    
+    function loop() {
+        let ctx = canvas.getContext("2d")
+        
+        //摄像头位置
+        cameraX = player.x - canvas.width / 2
+        cameraY = player.y - canvas.height / 2
+
+        if(player.jump == false) {
+            player.x_v *= friction
+        } else {
+            player.y_v += gravity
+        }
+        player.jump = true
+        if(keys.left) {
+            player.x_v = -2.5
+        }
+        if(keys.right) {
+            player.x_v = 2.5
+        }
+
+        //更新位置
+        player.y += player.y_v
+        player.x += player.x_v
+
+        if (player.x < 0) {
+            player.x = 0
+        }
+        if (player.x > canvas.width - player.width) {
+            player.x = canvas.width - player.width
+        }
+        if (player.y > canvas.height - player.height) {
+            player.y = canvas.height - player.height 
+            player.jump = false
+        }
+
+        if(player.x < door.x + door.width && 
+           player.x + player.width > door.x && 
+           player.y < door.y + door.height && 
+           player.y + player.height > door.y ){
+            //根据玩家是否初次来结算游戏
+                if (ch<6) {
+                    ch++
+                    x1 = parseInt(x)
+                    x = (x1 + 5).toString()
+                    console.log(x)
+                    console.log(x1)
+                    localStorage.setItem('money', x.toString())
+                    localStorage.setItem('ch', ch.toString())
+                }
+                else {
+                    location.href = "../chapter1/ch1.html"
+                    x1 = parseInt(x)
+                    y = parseInt(Math.floor(Math.random() * 11))
+                    x = (x1 + y).toString()
+                    localStorage.setItem('money', x.toString())
+
+                }
+                
+            } 
+        
+
+
+        for(let i = 0; i < platforms.length; i++) {
+            if(player.x < platforms[i].x + platforms[i].width && 
+               player.x + player.width > platforms[i].x && 
+               player.y < platforms[i].y + platforms[i].height && 
+               player.y + player.height > platforms[i].y){
+                player.jump = false
+                player.y = platforms[i].y - player.height
+            }
+        }
+
+        Ccanvas()
+        Cplat()
+        Cplayer()
+        Cdoor()
+        Cfake()
+
+
+    }
+    
+    //收尾
+    canvas=document.getElementById("canvas")
+    ctx=canvas.getContext("2d")
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    createplat()
+    document.addEventListener("keydown",keydown)
+    document.addEventListener("keyup",keyup)
+    setInterval(loop,22)
+
+    //音乐
+    var audio = new Audio('mazegameprojectnew/assets/Items/music.mp3')
+    audio.loop = true
+    audio.play()
+</script>
+</body>
+</html>
