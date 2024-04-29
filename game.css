@@ -2851,23 +2851,23 @@ body {
 }
 
 .x2 {
-    background-image: url("ch5.jpg");
+    background-image: url("game2048project/ch5.jpg");
     color: white
 }
 .x4 {
-    background-image: url("cozmezVD.png");    
+    background-image: url("vd/img/cozmezvd.png");    
     color: white
 }
 .x8 {
-    background-image: url("baevd.png");    
+    background-image: url("vd/img/baevd.png");    
     color: white
 }
 .x16{
-    background-image: url("tcwvd.png");    
+    background-image: url("vd/img/tcwvd.png");    
     color: white
 }
 .x32{
-    background-image: url("akyrvd.png");    
+    background-image: url("vd/img/akyrvd.png");    
     color: white 
 }
 .x64{
@@ -2880,17 +2880,17 @@ body {
 }
 
 .x256{
-    background-image: url("baeC.png");    
+    background-image: url("character/bg/baeC.png");    
     color: white
 }
 
 .x512{
-    background-image: url("tcwC.png");    
+    background-image: url("character/bg/tcwC.png");    
     color: white
 }
 
 .x1024{
-    background-image: url("cC.png");    
+    background-image: url("character/bg/cC.png");    
     color: white    
 }
 
@@ -2900,11 +2900,11 @@ body {
 }
 
 .x4096 {
-    background-image: url("nayuta.png");    
+    background-image: url("character/char/cz/nayuta.png");    
     color: white
 }
 
 .x8192 {
-    background-image: url("kanata.png");    
+    background-image: url("character/char/cz/kanata.png");    
     color: white
 }
