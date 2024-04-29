@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Akanyatsura</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+
+    <button onclick="home()" id="home">Back</button>
+   
+    <button onclick="iori()" id="iori"> Iori Suiseki </button>
+    <button onclick="zen()" id="zen"> Zen Gaho </button>
+    <button onclick="hokusai()" id="hokusai"> Hokusai Masaki </button>
+    <button onclick="reo()" id="reo"> Reo Maruyama </button>
+    <button onclick="satsuki()" id="satsuki"> Satsuki Ito </button>
+
+    <p id="VDT">Akanyatsura</p> 
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+
+       function home(){
+        location.href = "cC.html"   
+       }
+
+       //iori介绍按钮
+       function iori() {
+        location.href = "char/akyr/iori.html"
+       }
+
+       //zen介绍按钮
+       function zen() {
+        location.href = "char/akyr/zen.html"
+       }
+       
+       //hokusai介绍按钮
+       function hokusai() {
+        location.href = "char/akyr/hokusai.html"
+       }
+
+       //reo介绍按钮
+       function reo() {
+        location.href = "char/akyr/reo.html"
+       }
+
+       //satsuki介绍按钮
+       function satsuki() {
+        location.href = "char/akyr/satsuki.html"
+       }
+
+
+       function preload() {
+            bg = loadImage("../vd/img/akyrvd.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

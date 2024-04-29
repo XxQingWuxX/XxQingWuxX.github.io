@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>2-3</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+    <div class="popupG" id="popupG">
+        <div class="overlayG"></div>
+        <div class="contentG">
+            <div class="closeG"></div>
+                <h1>Start?</h1>
+                <button onclick="yesG()" id="yesN"> Start </button>
+                <button onclick="togglePopupG()" id="noG"> X </button>
+                <button onclick="backG()" id="backG"> Quit </button>
+
+        </div>
+    </div>
+    <button onclick="togglePopupG()" id="popG"> Begin </button>
+
+    <p id="ch03T">Two Crowns</p>
+    <p id="ch13GD"> Play a 2048 mini game, you can leave anytime since you won't get any money from this round.  </p>
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       
+
+       function togglePopupG() {
+            document.getElementById("popupG").classList.toggle('active')
+       }
+       function yesG(){
+        location.href = "../game2048project/ch23G.html"   
+       }
+
+       function backG(){
+        location.href = "ch2.html"   
+       }
+
+       function preload() {
+            bg = loadImage("../ch0.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

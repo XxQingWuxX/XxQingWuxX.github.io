@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chapter 1</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="ch0bg"></p>
+    <p id="ch0T">CH-1 Get It</p>
+    <button onclick="story()" id="story">Back</button>
+    
+    <!--要读0-1吗？-->
+    <div class="popup01" id="popup01">
+        <div class="overlay01"></div>
+        <div class="content01">
+            <div class="close01"></div>
+                <h1>Read this section?</h1>
+                <button onclick="yes()" id="yes01"> Yes </button>
+                <button onclick="togglePopup01()" id="no01"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopup01()" id="pop01"> Story 1-1 </button>
+    
+    <!--要读0-2吗？-->
+    <div class="popup02" id="popup02">
+        <div class="overlay02"></div>
+        <div class="content02">
+            <div class="close02"></div>
+            <h1>Read this section?</h1>
+            <button onclick="yes02()" id="yes02"> Yes </button>
+            <button onclick="togglePopup02()" id="no02"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopup02()" id="pop02"> Story 1-2 </button>
+
+    <!--要玩0-3吗？-->
+    <div class="popup03" id="popup03">
+        <div class="overlay03"></div>
+        <div class="content03">
+            <div class="close03"></div>
+            <h1>Play?</h1>
+            <button onclick="yes03()" id="yes03"> Yes </button>
+            <button onclick="togglePopup03()" id="no03"> No </button>
+        </div>
+    </div>
+    <button onclick="togglePopup03()" id="pop03"> Game 1-3 </button>
+
+    <!--未达标准，还未解锁-->
+    <div class="popupU" id="popupU">
+        <div class="overlayU"></div>
+        <div class="contentU">
+            <div class="closeU"></div>
+            <h1>You have not unlock this yet.</h1>
+            <button onclick="togglePopupU()" id="noU"> Quit </button>
+        </div>
+    </div>
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let x = parseInt(localStorage.getItem('money')) 
+       let ch = parseInt(localStorage.getItem('ch'))
+       
+       //1-1
+       console.log(ch)
+       function yes(){
+        location.href = "ch11.html"   
+       }
+
+       if (ch>=3){
+        function togglePopup01() {
+            document.getElementById("popup01").classList.toggle('active')
+       }
+        }
+        else {
+            function togglePopup01() {
+                document.getElementById("popupU").classList.toggle('active')
+            }
+        }
+
+       //未达标准与1-2
+       function togglePopupU() {
+        document.getElementById("popupU").classList.toggle('active')
+       }
+
+       if (ch>=4){
+            function togglePopup02() {
+                document.getElementById("popup02").classList.toggle('active')
+            }
+        }
+        else {
+            function togglePopup02() {
+                document.getElementById("popupU").classList.toggle('active')
+            }
+        }
+
+       function yes02(){
+        location.href = "ch12.html"   
+       }
+
+       //未达标准与1-3
+       function togglePopupU() {
+        document.getElementById("popupU").classList.toggle('active')
+       }
+
+       if (ch>=5){
+        function togglePopup03() {
+            document.getElementById("popup03").classList.toggle('active')
+		}
+    }
+        else {
+            function togglePopup03() {
+                document.getElementById("popupU").classList.toggle('active')
+            }
+        }
+		
+       function yes03(){
+        location.href = "ch13.html"   
+       }
+
+       //返回主线
+       function story(){
+        location.href = "../main.html"   
+       }
+
+       //背景图
+       function preload() {
+            bg = loadImage("../ch0.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>cozmez</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+
+    <button onclick="home()" id="home">Back</button>
+   
+    <button onclick="kanata()" id="kanata"> Kanata Yatonokami </button>
+    <button onclick="nayuta()" id="nayuta"> Nayuta Tatonokami </button>
+    <p id="VDT">Cozmez</p> 
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+
+       //返回cozmez介绍的按钮
+       function home(){
+        location.href = "cC.html"   
+       }
+
+       //kanata介绍按钮
+       function kanata() {
+        location.href = "char/cz/kanata.html"
+       }
+
+       //nayuta介绍按钮
+       function nayuta() {
+        location.href = "char/cz/nayuta.html"
+       }
+
+
+       function preload() {
+            bg = loadImage("bg/cC.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

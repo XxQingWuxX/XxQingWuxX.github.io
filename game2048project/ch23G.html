@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0; 
+        overflow: hidden;
+        background-image: url("ch5.jpg");
+        background-size: cover; 
+    }
+    
+</style>
+
+<body>
+=    <h2>Score:  <span id="ch0T">0</span></h2>
+    <div id="board"></div>
+    <div class="popup02" id="popup02">
+        <div class="overlay02"></div>
+        <div class="content02">
+            <div class="close02"></div>
+            <h1>Quit?</h1>
+            <button onclick="yes02()" id="yes02"> Quit </button>
+            <button onclick="togglePopup02()" id="no02"> No </button>    
+    </div>
+    <button onclick="togglePopup02()" id="pop02">End Game</button>
+    <script>
+        let board
+        let ch0T = 0
+        let rows = 4
+        let columns = 4
+        let ch = localStorage.getItem('ch')
+        let x = localStorage.getItem('money')
+
+        function togglePopup02() {
+            document.getElementById("popup02").classList.toggle('active')
+        }
+        
+
+
+        function yes02() {
+            if (ch<9) {
+                    ch++
+                    x1 = parseInt(x)
+                    x = (x1 + 5).toString()
+                    console.log(x)
+                    console.log(x1)
+                    localStorage.setItem('money', x.toString())
+                    localStorage.setItem('ch', ch.toString())
+                }
+                else {
+                    location.href = "../final/ch2.html"
+                }
+                
+            } 
+           
+        window.onload = function () {
+            setGame()
+        }
+
+        var audio = new Audio('../mazegameprojectnew/assets/Items/music.mp3')
+        audio.loop = true
+        audio.play()
+
+        function setGame() {
+            board = [
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ]
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < columns; c++) {
+                    let tile = document.createElement("div")
+                    tile.id = r.toString() + "-" + c.toString()
+                    let num = board[r][c]
+                    updateTile(tile, num)
+                    document.getElementById("board").append(tile)
+                }
+            }
+            setTwo()
+            setTwo()
+        }
+
+        function updateTile(tile, num) {
+            tile.innerText = ""
+            tile.classList.value = ""
+            tile.classList.add("tile")
+            if (num > 0) {
+                tile.innerText = num.toString()
+                if (num <= 4096) {
+                    tile.classList.add("x" + num.toString())
+                } else {
+                    tile.classList.add("x8192")
+                }
+            }
+        }
+
+        document.addEventListener('keyup', (e) => {
+            if (e.code == "ArrowLeft") {
+                slideLeft()
+                setTwo()
+            } else if (e.code == "ArrowRight") {
+                slideRight()
+                setTwo()
+            } else if (e.code == "ArrowUp") {
+                slideUp()
+                setTwo()
+
+            } else if (e.code == "ArrowDown") {
+                slideDown()
+                setTwo()
+            }
+            document.getElementById("ch0T").innerText = ch0T
+
+            if (!hasValidMoves()) {
+               document.getElementById("pop02").style.display = "block"
+            }
+        });
+
+        function filterZero(row) {
+            return row.filter(num => num != 0)
+        }
+
+        function slide(row) {
+            row = filterZero(row);
+            for (let i = 0; i < row.length - 1; i++) {
+                if (row[i] == row[i + 1]) {
+                    row[i] *= 2
+                    row[i + 1] = 0
+                    ch0T += row[i]
+                }
+            }
+            row = filterZero(row);
+            while (row.length < columns) {
+                row.push(0)
+            }
+            return row
+        }
+
+        function slideLeft() {
+            for (let r = 0; r < rows; r++) {
+                let row = board[r]
+                row = slide(row)
+                board[r] = row
+                for (let c = 0; c < columns; c++) {
+                    let tile = document.getElementById(r.toString() + "-" + c.toString())
+                    let num = board[r][c]
+                    updateTile(tile, num)
+                }
+            }
+        }
+
+        function slideRight() {
+            for (let r = 0; r < rows; r++) {
+                let row = board[r]
+                row.reverse()
+                row = slide(row)
+                board[r] = row.reverse()
+                for (let c = 0; c < columns; c++) {
+                    let tile = document.getElementById(r.toString() + "-" + c.toString())
+                    let num = board[r][c]
+                    updateTile(tile, num)
+                }
+            }
+        }
+
+        function slideUp() {
+            for (let c = 0; c < columns; c++) {
+                let row = [board[0][c], board[1][c], board[2][c], board[3][c]]
+                row = slide(row)
+                for (let r = 0; r < rows; r++) {
+                    board[r][c] = row[r]
+                    let tile = document.getElementById(r.toString() + "-" + c.toString())
+                    let num = board[r][c]
+                    updateTile(tile, num)
+                }
+            }
+        }
+
+        function slideDown() {
+            for (let c = 0; c < columns; c++) {
+                let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
+                row.reverse()
+                row = slide(row)
+                row.reverse()
+                for (let r = 0; r < rows; r++) {
+                    board[r][c] = row[r]
+                    let tile = document.getElementById(r.toString() + "-" + c.toString())
+                    let num = board[r][c]
+                    updateTile(tile, num)
+                }
+            }
+        }
+
+        function setTwo() {
+            if (!hasEmptyTile()) {
+                return
+            }
+            let found = false;
+            while (!found) {
+                let r = Math.floor(Math.random() * rows)
+                let c = Math.floor(Math.random() * columns)
+                if (board[r][c] == 0) {
+                    board[r][c] = 2
+                    let tile = document.getElementById(r.toString() + "-" + c.toString())
+                    tile.innerText = "2"
+                    tile.classList.add("x2")
+                    found = true
+                }
+            }
+        }
+
+        function hasEmptyTile() {
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < columns; c++) {
+                    if (board[r][c] == 0) {
+                        return true
+                    }
+                }
+            }
+            return false;
+        }
+
+        function hasValidMoves() {
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < columns; c++) {
+                    if ((r > 0 && board[r][c] == board[r - 1][c]) ||
+                        (r < rows - 1 && board[r][c] == board[r + 1][c]) ||
+                        (c > 0 && board[r][c] == board[r][c - 1]) ||
+                        (c < columns - 1 && board[r][c] == board[r][c + 1])) {
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+
+        
+    </script>
+</body>
+</html>

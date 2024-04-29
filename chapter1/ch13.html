@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>1-3</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+    <div class="popupG" id="popupG">
+        <div class="overlayG"></div>
+        <div class="contentG">
+            <div class="closeG"></div>
+                <h1>Start?</h1>
+                <button onclick="yesG()" id="yesN"> Start </button>
+                <button onclick="togglePopupG()" id="noG"> X </button>
+                <button onclick="backG()" id="backG"> Quit </button>
+
+        </div>
+    </div>
+    <button onclick="togglePopupG()" id="popG"> Begin </button>
+
+    <p id="ch03T">Get It</p>
+    <p id="ch13GD"> As Kanata is traped inside himself due to the realization that Nayuta passed away. Reach the top to help Kanata escape from his truama. There will be fake exit and use for a variety use arrow keys to move.</p>
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       
+
+       function togglePopupG() {
+            document.getElementById("popupG").classList.toggle('active')
+       }
+       function yesG(){
+        location.href = "../platformergameprojectnew/ch13G.html"   
+       }
+
+       function backG(){
+        location.href = "ch1.html"   
+       }
+
+       function preload() {
+            bg = loadImage("../ch0.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

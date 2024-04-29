@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Cat Whiskers</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://unpkg.com/p5.collide2d"></script>
+   <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+<body>
+
+    <button onclick="home()" id="home">Back</button>
+   
+    <button onclick="naoakira()" id="naoakira"> Naoakira Saimon </button>
+    <button onclick="yohei()" id="yohei"> Yohei Kanbayashi </button>
+    <button onclick="ryu()" id="ryu"> Ryu Natsume </button>
+    <button onclick="shiki()" id="shiki"> Shiki Ando </button>
+    <p id="VDT">The Cat Whiskers</p> 
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+
+       function home(){
+        location.href = "cC.html"   
+       }
+
+       //naoakira介绍按钮
+       function naoakira() {
+        location.href = "char/tcw/naoakira.html"
+       }
+
+       //yohei介绍按钮
+       function yohei() {
+        location.href = "char/tcw/yohei.html"
+       }
+
+       //ryu介绍按钮
+       function ryu() {
+        location.href = "char/tcw/ryu.html"
+       }
+
+       //shiki介绍按钮
+       function shiki() {
+        location.href = "char/tcw/shiki.html"
+       }
+
+
+       function preload() {
+            bg = loadImage("bg/tcwC.png")
+        }
+
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

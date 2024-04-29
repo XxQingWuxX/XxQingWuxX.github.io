@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+        "Paradox Devil: The four groups attending Paradox Live was....",
+        "Paradox Devil: Bae!",
+        "Paradox Devil: The Cat's Whiskers!",
+        "Paradox Devil: cozmez!",
+        "Paradox Devil: Akanyatsura!",
+        "Paradox Devil: Let's draw lots to decided which group is against each other.",
+        "Paradox Devil: First up...",
+        "Paradox Devil: Bae Vs Akanyatsura!",
+        "Paradox Devil: Next...",
+        "Paradox Devil: cozmez Vs The Cat's Whiskers!",
+        "....After the performances",
+        "Paradox Devil: Let's see the winners to proceed into the final battle!",
+        "Paradox Devil: Let us congrats Bae and cozmez!",
+        "Paradox Devil: Please come up the stage for your final battle.",
+        "After a while.... Bae still didn't show up.",
+        "Paradox Devil: In that case",
+        "Paradox Devil: Bae forefit!",
+        "Paradox Devil: Let us congrats cozmez!",
+        "Paradox Devil: Now, it's time to challage the legend",
+        "Paradox Devil: Buraikan!",
+        "After the two performances",
+        "Chisei: You know...",
+        "Chisei: Nayuta doesn't exsist anymore.",
+        "Chisei: The one who performed with you, is just like us...",
+        "Chisei: illusions!",
+        "Because of what the Buraikan illusions said, Kanata is now trapped inside his memories."
+    ]
+
+        //继续故事
+        let storyIndex = 0
+
+        x =localStorage.getItem('money')
+        ch=localStorage.getItem('ch')
+        console.log(x)
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                pass()
+            }
+        }
+
+        function pass() {
+            var x1
+            if (ch < 5) {
+                ch++
+                x1 = parseInt(x)
+                x = (x1 + 5).toString()
+                console.log(x)
+                console.log(x1)
+                localStorage.setItem('money', x.toString())
+                localStorage.setItem('ch', ch.toString())
+            } 
+            else {
+                location.href = "ch1.html"
+            }
+            }
+
+        //背景
+       function preload() {
+            bg = loadImage("../ch01.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>

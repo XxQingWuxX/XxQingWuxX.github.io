@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+    integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="../game.css" type="text/css">
+</head>
+
+<body>
+    <p id="storyBox"></p>
+    <p id="ch01s"></p>
+    <p id="tri"></p>
+    <button onclick="clicked()" id="click"></button>
+
+    <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+       let ch
+       let x
+
+       let storyLines = [
+        "Nayuta: Yesterday's stage was nice, isn't it?",
+        "Kanata: Yeah. If it's a paid stage the illusion's better, too.",
+        "Nayuta: Speaking of paid... ",
+        "The other day, Kanata said that there's an amazing event, right?",
+        "Para... something",
+        "Kanata: Yeah. It's called Paradox Live",
+        "Nayuta: That... When's that gonna be?",
+        "Kanata: You don't remember anything, do you? ",
+        "Can't be helped....It's on this day, next month, it's an important event, so remember it",
+        "Nayuta: Huum... But it's really amazing, for the prize to be ten billion.",
+        "You can do anything with that.",
+        "Kanata: Yeah..... We can eat lots of delicious food",
+        "Nayuta: Ain't that the best...ah",
+        "Kanata: Ah, you need water?",
+        "Nayuta: No, I'm fine",
+        "Kanata: Okay",
+        "Nayuta: Thanks",
+        "Kanata: And, if we have ten billion, I can bring Nayuta to a place with better doctors.",
+        "Nayuta: Kanata...."
+    ]
+
+        //继续故事
+        let storyIndex = 0
+
+        x =localStorage.getItem('money')
+        ch=localStorage.getItem('ch')
+        console.log(x)
+
+        function clicked() {
+            if (storyIndex < storyLines.length) {
+                document.getElementById('ch01s').innerHTML = storyLines[storyIndex]
+                storyIndex++
+            } 
+
+            else {
+                pass()
+            }
+        }
+
+        function pass() {
+            var x1
+            if (ch < 4) {
+                ch++
+                x1 = parseInt(x)
+                x = (x1 + 5).toString()
+                console.log(x)
+                console.log(x1)
+                localStorage.setItem('money', x.toString())
+                localStorage.setItem('ch', ch.toString())
+            } 
+            else {
+                location.href = "ch1.html"
+            }
+            }
+
+        //背景
+       function preload() {
+            bg = loadImage("../homepage.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+       }
+
+   </script>
+</body>
+</html>
