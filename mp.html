@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+            integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/p5.collide2d"></script>
+    <link rel="stylesheet" href="game.css" type="text/css">
+</head>
+
+<body>
+<p id="coins"></p>
+<button onclick="main()" id="main">Main</button>
+<button onclick="collection()" id="collection">Collection</button>
+
+<script>
+    let w = window.innerWidth
+    let h = window.innerHeight
+    let bg
+    let x
+
+    //看看是不是第一次
+    if (sessionStorage.getItem("isReload")){
+    }
+    else{
+        localStorage.setItem("money",0)
+        localStorage.setItem("ch",0)
+        localStorage.setItem("cozmez",0)
+        localStorage.setItem("ryu",0)
+        localStorage.setItem("bae",0)
+        localStorage.setItem('tcw',0)
+        sessionStorage.setItem("isReload",true)
+    }
+
+    //钱财打印
+    function outputMoney() {
+        update()
+        document.getElementById('coins').innerHTML = '$' + x
+    }
+
+    //更新钱财
+    function update() {
+        x = localStorage.getItem('money')
+        console.log(x)
+    }
+
+    //背景图
+    function preload() {
+        bg = loadImage("HomePage.png")
+    }
+    //主线按钮
+    function main() {
+        location.href = "main.html"
+    }
+
+    //收藏按钮
+    function collection() {
+        location.href = "collection.html"
+    }
+
+    //必要
+    function setup() {
+        createCanvas(w, h)
+        outputMoney()
+    }
+
+    //必要
+    function draw() {
+        background(bg)
+    }
+</script>
+</body>
+</html>

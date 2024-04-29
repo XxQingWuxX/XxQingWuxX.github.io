@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Story</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+   integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="game.css" type="text/css">
+</head>
+<body>
+    <p id="backg"></p>
+    <div class="popup" id="popup">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close" onclick="togglePopupQ()">&times;</div>
+                <p>There are 2 types of stories:</p>
+                <p>1. Proceed by clicking the screen; you'll see a triangle at the bottom of the text box that identifies this type.</p>
+                <p>2. Drop-out boxes appear when hovering the mouse over them; this can be identified by having a page with several boxes but no sentences.</p> 
+        </div>
+    </div>
+    <button onclick="togglePopupQ()" id="QA"> ? </button>
+
+
+
+    <button onclick="CH0()" id="CH0">Prolouge - Where They At</button>
+    <button onclick="CH1()" id="CH1">CH-1 Get It</button>
+    <button onclick="CH2()" id="CH2">Final - Two Crowns</button>
+    <button onclick="home()" id="home">Back</button>
+
+
+
+   <script>
+       let w = window.innerWidth
+       let h = window.innerHeight
+       let bg
+
+        //规则
+       function togglePopupQ() {
+        document.getElementById("popup").classList.toggle('active')
+       }
+       
+       //返回主页的按钮
+       function home(){
+        location.href = "mp.html"   
+       }
+
+       //序章按钮
+       function CH0(){
+        location.href = "prolouge/ch0.html"   
+       }
+
+       //第一章按钮
+       function CH1(){
+        location.href = "chapter1/ch1.html"   
+       }
+
+       //第二章按钮
+       function CH2(){
+        location.href = "final/ch2.html"   
+       }
+
+       //第三章按钮
+       function CH3(){
+        location.href = "ch3.html"   
+       }
+
+       //背景图
+       function preload() {
+            bg = loadImage("main.png")
+        }
+
+        //必要
+       function setup() {
+           createCanvas(w, h)
+       }
+
+       //必要
+       function draw() {
+            background(bg)
+
+       }
+
+   </script>
+</body>
+</html>

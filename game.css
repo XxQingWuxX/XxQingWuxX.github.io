@@ -1,0 +1,2910 @@
+/*所有的主体*/
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+/*主页和商店的金币*/
+#coins {
+    height: 10vh;
+    width: 40vw;
+    font-size: 50px;
+    position: absolute;
+    top: -5vh;
+    left:50vw;
+    text-align: center;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*从主线，商店，收藏返回主页的按钮*/
+#home {
+    cursor: pointer;
+    height: 6vh;
+    width: 10vw;
+    overflow: hidden;
+    font-size: 25px;
+    position: absolute;
+    top: 5vh;
+    left:2vw;
+    text-align: center;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*从故事返回主线的按钮*/
+#story {
+    cursor: pointer;
+    height: 6vh;
+    width: 10vw;
+    overflow: hidden;
+    font-size: 25px;
+    position: absolute;
+    top: 5vh;
+    left:2vw;
+    text-align: center;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*从登入进入主页的按钮*/
+#open {
+    cursor: pointer;
+    height: 22vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 100px;
+    position: absolute;
+    top: 75vh;
+    left:37vw;
+    text-align: center;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*游戏名称*/
+#nameopening {
+    height: 20vh;
+    width: 30vw;
+    overflow: hidden;
+    font-size: 100px;
+    position: absolute;
+    top: -10vh;
+    left:35vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去往收藏的按钮*/
+#collection {
+    cursor: pointer;
+    height: 30vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 60vh;
+    left:60vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去往主线的按钮*/
+#main {
+    cursor: pointer;
+    height: 30vh;
+    width: 51vw;
+    overflow: hidden;
+    font-size: 130px;
+    position: absolute;
+    top: 25vh;
+    left:47vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*一个背景box*/
+#backg {
+    z-index: 0;
+    height: 110vh;
+    width: 50vw;
+    overflow: hidden;
+    position: absolute;
+    top: -5vh;
+    left: 50vw;
+    background-color: rgba(173, 190, 230, 0.5);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+}
+
+/*去序章的按钮*/
+#CH0 {
+    cursor: pointer;
+    height: 10vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 15vh;
+    left:55vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去第一章的按钮*/
+#CH1 {
+    cursor: pointer;
+    height: 10vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 35vh;
+    left:55vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去第二章的按钮*/
+#CH2 {
+    cursor: pointer;
+    height: 10vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 55vh;
+    left:55vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去第三章的按钮*/
+#CH3 {
+    cursor: pointer;
+    height: 10vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 75vh;
+    left:55vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*序章的背景box*/
+#ch0bg{
+    z-index: 0;
+    height: 110vh;
+    width: 30vw;
+    overflow: hidden;
+    position: absolute;
+    top: -5vh;
+    left: 70vw;
+    background-color: rgba(173, 190, 230, 0.5);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+}
+
+/*序章的名字*/
+#ch0T {
+    height: 11vh;
+    width: 50vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 0vh;
+    left:25vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去序章一的按钮*/
+#pop01 {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left:75vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.popup01 .overlay01 {
+    position: fixed;
+    top: 0vh;
+    left: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+.popup01 .content01 {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popup01.active .overlay01{
+    display: block;
+}
+.popup01.active .content01{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+#no01{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yes01{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去序章二的按钮*/
+#pop02 {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 50vh;
+    left:75vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlay02 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.content02 {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popup02.active .overlay02 {
+    display: block;
+}
+.popup02.active .content02 {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#no02{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yes02{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去序章三的按钮*/
+#pop03 {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlay03 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.content03 {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popup03.active .overlay03 {
+    display: block;
+}
+.popup03.active .content03 {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#no03{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yes03{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*字幕背景*/
+#storyBox{
+    height:40vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 60vh;
+    left:0vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+}
+
+/*通过点来过故事*/
+#click {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    background-color: transparent;
+    border: none;
+}
+
+/*点点点故事的指引点*/
+#tri {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 93vh;
+    left: 47vw;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid rgba(17, 37, 44, 0.8);
+  }
+
+ /*序章一字幕*/ 
+ #ch01s {
+    white-space: normal;
+    position: absolute;
+    top: 65vh;
+    left: 5vw;
+    height: 30vh;
+    width: 85vw;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*三类故事介绍*/
+#QA {
+    cursor: pointer;
+    height: 5vh;
+    width: 3vw;
+    font-size: 15px;
+    position: absolute;
+    top: 5vh;
+    left:95vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 50%;
+
+}
+.popup .overlay {
+    position: fixed;
+    top: 0vh;
+    left: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+.popup .content {
+    height: 70vh;
+    width: 60vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popup .close {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 55vw;
+    top: 20px;
+    background: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+/*未达标准*/
+#popU {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayU {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentU {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupU.active .overlayU {
+    display: block;
+}
+.popupU.active .contentU {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noU{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 18vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*0-2 cozmez*/
+.dropdownmenu {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+.dropdownmenu .one {
+    height: 8vh;
+    width: 20vw;
+    font-size: 30px;
+    position:absolute ;
+    top: 3vh;
+    left: 45vw;
+    background-color: rgba(173,216,230,1);
+    }
+.dropdownmenu .one ul {
+    display: none;
+    width: 40vw;
+    height: 23vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-text-stroke: 1px black;
+    background-color:rgba(173,216,230,1);
+    min-width: 160px;
+    font-size: 20px;
+}
+.dropdownmenu .one:hover ul {
+    display: block;
+}
+.dropdownmenu .one ul li {
+    padding: 8px 12px;
+}
+.dropdownmenu .one ul li:hover {
+    background-color: rgb(133, 173, 186);
+}
+
+/*0-2 音乐风格*/
+.dropdownmenu2 {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+.dropdownmenu2 .two {
+    height: 8vh;
+    width: 20vw;
+    font-size: 30px;
+    position:absolute ;
+    top: 35vh;
+    left: 66vw;
+    background-color: rgba(173,216,230,1);
+        
+}
+.dropdownmenu2 .two ul {
+    display: none;
+    width: 30vw;
+    height: 20vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-text-stroke: 1px black;
+    background-color:rgba(173,216,230,1);
+    min-width: 160px;
+    font-size: 20px;
+}
+.dropdownmenu2 .two:hover ul {
+    display: block;
+}
+.dropdownmenu2 .two ul li {
+    padding: 8px 12px;
+}
+.dropdownmenu2 .two ul li:hover {
+    background-color: rgb(133, 173, 186);
+}
+
+/*0-2 哥哥*/
+.dropdownmenu3 {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+.dropdownmenu3 .three {
+    height: 8vh;
+    width: 30vw;
+    font-size: 30px;
+    position:absolute ;
+    top: 3vh;
+    left: 2vw;
+    background-color: rgba(173,216,230,1);
+        
+}
+.dropdownmenu3 .three ul {
+    display: none;
+    width: 40vw;
+    height: 27vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-text-stroke: 1px black;
+    background-color:rgba(173,216,230,1);
+    min-width: 160px;
+    font-size: 20px;
+}
+.dropdownmenu3 .three:hover ul {
+    display: block;
+}
+.dropdownmenu3 .three ul li {
+    padding: 8px 12px;
+}
+.dropdownmenu3 .three ul li:hover {
+    background-color: rgb(133, 173, 186);
+}
+
+/*0-2 弟弟*/
+.dropdownmenu4 {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+.dropdownmenu4 .four {
+    height: 8vh;
+    width: 30vw;
+    font-size: 30px;
+    position:absolute ;
+    top: 65vh;
+    left: 25vw;
+    background-color: rgba(173,216,230,1);
+        
+}
+.dropdownmenu4 .four ul {
+    display: none;
+    width: 40vw;
+    height: 26vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-text-stroke: 1px black;
+    background-color:rgba(173,216,230,1);
+    min-width: 160px;
+    font-size: 20px;
+}
+.dropdownmenu4 .four:hover ul {
+    display: block;
+}
+.dropdownmenu4 .four ul li {
+    padding: 8px 12px;
+}
+.dropdownmenu4 .four ul li:hover {
+    background-color: rgb(133, 173, 186);
+}
+
+/*0-2*/
+.dropdownmenu5 {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+.dropdownmenu5 .five {
+    height: 8vh;
+    width: 20vw;
+    font-size: 30px;
+    position:absolute ;
+    top: 64vh;
+    left: 58vw;
+    background-color: rgba(173,216,230,1);
+        
+}
+.dropdownmenu5 .five ul {
+    display: none;
+    width: 38vw;
+    height: 26vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-text-stroke: 1px black;
+    background-color:rgba(173,216,230,1);
+    min-width: 160px;
+    font-size: 20px;
+}
+.dropdownmenu5 .five:hover ul {
+    display: block;
+}
+.dropdownmenu5 .five ul li {
+    padding: 8px 12px;
+}
+.dropdownmenu5 .five ul li:hover {
+    background-color: rgb(133, 173, 186);
+}
+
+
+/*下一章*/
+#popN {
+    cursor: pointer;
+    height: 9vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 1vh;
+    left:78vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.popupN .overlayN {
+    position: fixed;
+    top: 0vh;
+    left: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+.popupN .contentN {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupN.active .overlayN{
+    display: block;
+}
+.popupN.active .contentN{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+#backN{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yesN{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#noN {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 55vw;
+    top: 20px;
+    background: black;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    border-radius: 50%;
+}
+
+
+
+/*开始游戏*/
+#popG {
+    cursor: pointer;
+    height: 9vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 90vh;
+    left:40vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 0.5cm;
+    z-index: 2;
+}
+.popupG .overlayG {
+    position: fixed;
+    top: 0vh;
+    left: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+.popupG .contentG {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupG.active .overlayG{
+    display: block;
+}
+.popupG.active .contentG{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+#backG{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yesG{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#noG {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 55vw;
+    top: 20px;
+    background: black;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    border-radius: 50%;
+}
+
+#ch03T{
+    height: 10vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 45px;
+    position: absolute;
+    top: 0vh;
+    left: 30vw;
+    background-color: rgba(173,216,230,0.5);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 0.5cm; 
+}
+
+/*0-3的小游戏介绍*/
+#ch03GD {
+    height: 55vh;
+    width: 90vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 33vh;
+    left:5vw;
+    text-align: center;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 0.5cm;
+    z-index: 1;
+}
+
+/*1-3的小游戏介绍*/
+#ch13GD {
+    height: 18svh;
+    width: 90vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 53vh;
+    left:5vw;
+    text-align: center;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 0.5cm;
+    z-index: 1;
+}
+
+/*从收藏去故事按钮*/
+#sC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 25vh;
+    left:70vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去往角色介绍*/
+#cC {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 45vh;
+    left:70vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去往角色介绍*/
+#oC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 45vh;
+    left:70vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*去往胜利宣言*/
+#Vd {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 40vh;
+    left:70vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*胜利宣言*/
+#VDT {
+    height: 12vh;
+    width: 40vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 0vh;
+    left:30vw;
+    background-color: rgba(173,216,230,0.5);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*去cozmez胜利宣言的按钮*/
+#popCZ{
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 15vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayCZ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentCZ {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupCZctive .overlayCZ{
+    display: block;
+}
+.popupCZ.active .contentCZ {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noCZ{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yesCZ{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*未达标准cozmez*/
+#popUc {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayUc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentUc {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupUc.active .overlayUc {
+    display: block;
+}
+.popupUc.active .contentUc {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noUc{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#bUc{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*钱不够cozmez*/
+#popM {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayM {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentM {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupM.active .overlayM {
+    display: block;
+}
+.popupM.active .contentM {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noM{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 19vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*猫组胜利宣言*/
+#poptcw{
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 55vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlaytcw {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contenttcw {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popuptcw.actice .overlaytcw{
+    display: block;
+}
+.popuptcw.active .contenttcw {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#notcw{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yestcw{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*未达标准猫组*/
+#popUt {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayUt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentUt {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupUt.active .overlayUt {
+    display: block;
+}
+.popupUt.active .contentUt {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noUt{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#bUt{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*钱不够tcw*/
+#popMtcw {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayMtcw {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentMtcw {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupMtcw.active .overlayMtcw {
+    display: block;
+}
+.popupMtcw.active .contentMtcw {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noMtcw{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 19vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+
+/*bae胜利宣言*/
+#popbae{
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 35vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlaybae {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentbae {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupbae.active .overlaybae{
+    display: block;
+}
+.popupbae.active .contentbae {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#nobae{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yesbae{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*未达标准bae*/
+#popUb {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayUb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentUb {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupUb.active .overlayUb {
+    display: block;
+}
+.popupUb.active .contentUb {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noUb{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#bUb{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*钱不够bae*/
+#popMb {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayMb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentMb {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupMb.active .overlayMb {
+    display: block;
+}
+.popupMb.active .contentMb {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noMb{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 19vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*恶组胜利宣言*/
+#popak{
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 75vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayak {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentak {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupak.active .overlayak{
+    display: block;
+}
+.popupak.active .contentak {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noak{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 8vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#yesak{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*恶组未达标准*/
+#popUa {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayUa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentUa {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupUa.active .overlayUa {
+    display: block;
+}
+.popupUa.active .contentUa {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noUa{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 33vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+#bUa{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 6vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*钱不够bae*/
+#popMa {
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 70vh;
+    left: 75vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+.overlayMa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.contentMa {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    font-size: 25px;
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+.popupMa.active .overlayMa {
+    display: block;
+}
+.popupMa.active .contentMa {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+#noMa{
+    cursor: pointer;
+    height: 10vh;
+    width: 20vw;
+    overflow: hidden;
+    font-size: 30px;
+    position: absolute;
+    top: 30vh;
+    left: 19vw;
+    background-color: rgba(173,216,230,1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*双子介绍*/
+#czC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 3vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*bae介绍*/
+#baeC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 23vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*猫组介绍*/
+#tcwC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 43vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*恶组介绍*/
+#aC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 63vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*武雷馆介绍*/
+#bC {
+    cursor: pointer;
+    height: 15vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 40px;
+    position: absolute;
+    top: 83vh;
+    left:73vw;
+    background-color: rgba(173,216,230,0.8);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*kanata按钮*/
+#kanata {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 30vh;
+    left: 70vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*nayuta按钮*/
+#nayuta {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 65vh;
+    left: 70vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*allen按钮*/
+#allen {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 15vh;
+    left: 70vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*hajun按钮*/
+#hajun {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 44vh;
+    left: 70vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*anne按钮*/
+#anne {
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 73vh;
+    left: 70vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*naoakira按钮*/
+#naoakira {
+    cursor: pointer;
+    height: 20vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 2vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*yohei按钮*/
+#yohei {
+    cursor: pointer;
+    height: 22vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 25vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*ryu按钮*/
+#ryu {
+    cursor: pointer;
+    height: 22vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 51vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*shiki按钮*/
+#shiki {
+    cursor: pointer;
+    height: 20vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 78vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*iori按钮*/
+#iori {
+    cursor: pointer;
+    height: 17vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 0vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*zen按钮*/
+#zen {
+    cursor: pointer;
+    height: 17vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 19vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+
+/*hokusai按钮*/
+#hokusai {
+    cursor: pointer;
+    height: 20vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 37vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*reo按钮*/
+#reo {
+    cursor: pointer;
+    height: 22vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 58vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+/*satsuki按钮*/
+#satsuki {
+    cursor: pointer;
+    height: 17vh;
+    width: 25vw;
+    overflow: hidden;
+    font-size: 50px;
+    position: absolute;
+    top: 81vh;
+    left: 72vw;
+    background-color: rgba(173, 216, 230, 1);
+    border-style: solid;
+    border-color: rgb(133, 173, 186);
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    border-radius: 1cm;
+}
+
+      
+
+#board {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(173, 216, 230, 1);
+    border: 6px solid rgb(133, 173, 186);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile {
+    width: 115.6px;
+    height: 115.6px;
+    border: 5px solid rgb(133, 173, 186);
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x2 {
+    background-image: url("ch5.jpg");
+    color: white
+}
+.x4 {
+    background-image: url("cozmezVD.png");    
+    color: white
+}
+.x8 {
+    background-image: url("baevd.png");    
+    color: white
+}
+.x16{
+    background-image: url("tcwvd.png");    
+    color: white
+}
+.x32{
+    background-image: url("akyrvd.png");    
+    color: white 
+}
+.x64{
+    background-image: url("CozmezOpening.png");    
+    color: white 
+}
+.x128{
+    background-image: url("HomePage.png");    
+    color: white
+}
+
+.x256{
+    background-image: url("baeC.png");    
+    color: white
+}
+
+.x512{
+    background-image: url("tcwC.png");    
+    color: white
+}
+
+.x1024{
+    background-image: url("cC.png");    
+    color: white    
+}
+
+.x2048{
+    background-image: url("ch01.png");    
+    color: white  
+}
+
+.x4096 {
+    background-image: url("nayuta.png");    
+    color: white
+}
+
+.x8192 {
+    background-image: url("kanata.png");    
+    color: white
+}
